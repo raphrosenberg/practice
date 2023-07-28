@@ -1,3 +1,3 @@
 # practice
-All sorts of practice exercises, tutorials and testing.
-Loosely separated into languages and platforms.
+Practice exercises tutorials and other various things are contained within this repository.
+Use at your own risk!
