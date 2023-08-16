@@ -102,7 +102,7 @@ EOF
      sudo -u www-data sed -i 's/username_here/wordpress/' /srv/www/wordpress/wp-config.php
      sudo -u www-data sed -i 's/password_here/administrator123/' /srv/www/wordpress/wp-config.php
      sudo systemctl restart mysql
-     sudo systemctl restart httpd
+     sudo systemctl restart apache2
      # Todo - Add https://api.wordpress.org/secret-key/1.1/salt/ to wp-config.php
    SHELL
 end
