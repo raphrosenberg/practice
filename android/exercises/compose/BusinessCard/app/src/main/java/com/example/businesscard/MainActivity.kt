@@ -69,12 +69,12 @@ fun BusinessCard(modifier: Modifier = Modifier) {
 
 @Composable
 fun NameInfo(name: String, title: String, modifier: Modifier = Modifier) {
-    val image = painterResource(R.drawable.android_logo)
+    val image = painterResource(R.drawable.motorcycle_bandw)
 
     Column(
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.padding(top = 80.dp, bottom = 20.dp)
+        modifier = Modifier.padding(top = 20.dp, bottom = 20.dp)
     ) {
         Image(
             painter = image,
