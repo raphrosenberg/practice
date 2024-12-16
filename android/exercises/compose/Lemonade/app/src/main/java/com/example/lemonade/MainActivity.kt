@@ -1,3 +1,9 @@
+/*
+ * Author: Raphael Rosenberg
+ * Lemonade - Android compose exercise
+ * Practice using delegates and lambdas.
+ */
+
 @file:OptIn(ExperimentalMaterial3Api::class)
 
 package com.example.lemonade
@@ -7,15 +13,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -25,7 +28,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -45,7 +47,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.lemonade.ui.theme.LemonadeTheme
 
 class MainActivity : ComponentActivity() {
@@ -60,6 +61,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// Composable container draws the contents of the Surface
 @Composable
 fun LemonadeTreeWithButtonAndImages(
     lemonImage: Painter,
@@ -128,6 +130,12 @@ fun LemonadeApp() {
             .padding(innerPadding)
             .wrapContentSize(Alignment.Center)
         ) {
+            // Draw composable container differently depending on lemonStage
+            // 1 -> lemon tree
+            // 2 -> lemon
+            // 3 -> full cup
+            // 4 -> empty cup
+            // Stage 2 requires a random (2..4) number of squeezes to proceed
             when (lemonStage) {
                 1 -> LemonadeTreeWithButtonAndImages(
                     painterResource(R.drawable.lemon_tree),
