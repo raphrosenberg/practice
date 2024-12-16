@@ -21,8 +21,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -75,19 +78,21 @@ fun LemonadeTreeWithButtonAndImages(
             verticalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxHeight()
         ) {
-            Image(
-                painter = lemonImage,
-                contentDescription = lemonCD,
-                modifier = Modifier
-                    .wrapContentSize()
-                    .background(
-                        Color(0xFFC3ECD2),
-                        shape = RoundedCornerShape(dimensionResource(R.dimen.background_radius)),
-                    )
-                    .height(dimensionResource(R.dimen.image_height))
-                    .width(dimensionResource(R.dimen.image_width))
-                    .clickable(onClick = clickFun)
-            )
+            Button(
+                onClick = clickFun,
+                shape = RoundedCornerShape(dimensionResource(R.dimen.button_corner_radius)),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFC3ECD2))
+            ) {
+                Image(
+                    painter = lemonImage,
+                    contentDescription = lemonCD,
+                    modifier = Modifier
+                        .wrapContentSize()
+                        .height(dimensionResource(R.dimen.image_height))
+                        .width(dimensionResource(R.dimen.image_width))
+                        .clickable(onClick = clickFun)
+                )
+            }
             Spacer(modifier = Modifier.padding(dimensionResource(R.dimen.spacer_padding)))
             Text(
                 text = lemonInstr,
