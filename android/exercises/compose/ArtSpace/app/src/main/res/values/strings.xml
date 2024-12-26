@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Art Space</string>
+    <string name="artist_name_1">Rene Magritte</string>
+    <string name="artist_name_2">Rene Magritte</string>
+    <string name="artist_name_3">Jan van Eyck</string>
+    <string name="artist_name_4">Richard Oelze</string>
+    <string name="artist_name_5">Pabblo Picasso</string>
+    <string name="artist_name_6">Pabblo Picasso</string>
+    <string name="artwork_title_1">The Pleasure Principle (Portrait of Edward James)</string>
+    <string name="artwork_title_2">L\'éternité</string>
+    <string name="artwork_title_3">Madonna and Child at the Fountain</string>
+    <string name="artwork_title_4">The Expectation</string>
+    <string name="artwork_title_5">Femme dans un fauteuil (Olga)</string>
+    <string name="artwork_title_6">Buste de femme</string>
+    <string name="artwork_year_1">1937</string>
+    <string name="artwork_year_2">1935</string>
+    <string name="artwork_year_3">1439</string>
+    <string name="artwork_year_4">1936</string>
+    <string name="artwork_year_5">1922</string>
+    <string name="artwork_year_6">1922</string>
+</resources>
