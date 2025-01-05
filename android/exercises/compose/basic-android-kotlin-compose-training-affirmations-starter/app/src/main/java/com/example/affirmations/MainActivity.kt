@@ -69,22 +69,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun AffirmationsApp() {
-    val layoutDirection = LocalLayoutDirection.current
-    Surface(
-        modifier = Modifier
-            .fillMaxSize()
-            .statusBarsPadding()
-            .padding(
-                start = WindowInsets.safeDrawing.asPaddingValues()
-                    .calculateStartPadding(layoutDirection),
-                end = WindowInsets.safeDrawing.asPaddingValues()
-                    .calculateEndPadding(layoutDirection),
-            )
-    ) {
-        AffirmationList(
-            affirmationList = Datasource().loadAffirmations()
-        )
-    }
+    AffirmationList(
+        affirmationList = Datasource().loadAffirmations()
+    )
 }
 
 @Composable
