@@ -61,6 +61,7 @@ fun ClassGridApp(modifier: Modifier = Modifier) {
 fun ClassGrid(topicList: List<Topic>, modifier: Modifier = Modifier ) {
     LazyVerticalGrid(
         verticalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
         columns = GridCells.Fixed(2),
         modifier = modifier.padding(8.dp)
     ) {
