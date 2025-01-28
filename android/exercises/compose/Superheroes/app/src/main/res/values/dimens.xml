@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardElevation">2dp</dimen>
+    <dimen name="itemHeight">72dp</dimen>
+    <dimen name="imageHeight">72dp</dimen>
+    <dimen name="heroImagePadding">8dp</dimen>
+    <dimen name="heroOuterBoxPadding">8dp</dimen>
+    <dimen name="genericPadding">16dp</dimen>
+</resources>
